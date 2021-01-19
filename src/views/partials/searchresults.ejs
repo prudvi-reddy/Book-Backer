@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Search Result</title>
+   </head>
+   <body>
+      <%- include ("./navbar") %>
+
+      <h1 id="search-title">Search Result</h1>
+
+      <% if (data.length > 0) { %>
+      <section class="books-stack">
+         <% for (var i = 0; i < data.length; i++) { %>
+         <div class="book-post">
+            <div class="book-post__img">
+               <img src="/books/<%=data[i]._id%>/bookcover" alt="book1" />
+            </div>
+            <div class="book-post__info">
+               <h1 class="book-post__title"><%= data[i].bookname %></h1>
+               <div class="book-post__quantity">
+                  <span>Quantity: </span>
+                  <span><%= data[i].quantity %></span>
+               </div>
+               <div class="book-post__quantity">
+                  <span>Donor Email Id: </span>
+                  <span><%= data[i].useremail%></span>
+               </div>
+               <p class="book-post__text"><%= data[i].description %></p>
+               <form class="book-post__form" action="/books/request/<%=data[i]._id %>" method="post">
+                  <input type="text" name="reason" placeholder="Mention Why do you need this book?" style="width: 70%" />
+                  <button class="request-btn" type="submit"><i class="fa fa-envelope"></i>REQUEST</button>
+               </form>
+            </div>
+         </div>
+         <% } %>
+      </section>
+      <% } else { %>
+      <div class="search-noresult">
+         <img src="img/bookLover.svg" alt="Book Lover" />
+         <h4 class="search-noresult__text">Oops! No Book Found</h4>
+      </div>
+      <% } %>
+   </body>
+</html>

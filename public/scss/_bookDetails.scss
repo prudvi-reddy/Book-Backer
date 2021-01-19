@@ -1,0 +1,352 @@
+.bookdetails {
+   font-family: $font2;
+   width: 94vw;
+   height: 86vh;
+   display: flex;
+   padding: 0 2rem;
+}
+
+.bookdetails-container {
+   height: 350px;
+   width: 900px;
+   text-align: center;
+   margin: 10em 3em 0em 10em;
+}
+
+.bookdetails-container .wrapper {
+   position: relative;
+   height: 350px;
+   width: 100%;
+   border: 2px dashed #c2cdda;
+   border-radius: 10px;
+   background: #fff;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.wrapper.active {
+   border: none;
+}
+
+.wrapper .image {
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.wrapper .image img {
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+   border-radius: 10px;
+}
+
+.wrapper .icon {
+   margin-left: 0.2em;
+   font-size: 120px;
+   color: Color(P-Blue);
+}
+
+.wrapper .text {
+   font-size: 20px;
+   font-weight: 500;
+   color: Color(P-DarkBlue);
+}
+
+.wrapper #cancel-btn {
+   position: absolute;
+   top: 15px;
+   right: 15px;
+   font-size: 20px;
+   cursor: pointer;
+   color: Color(P-Green);
+   display: none;
+}
+
+.wrapper.active:hover #cancel-btn {
+   display: block;
+}
+
+.wrapper #cancel-btn:hover {
+   color: Color(P-Red);
+}
+
+.wrapper .file-name {
+   position: absolute;
+   justify-content: center;
+   bottom: 0px;
+   width: 100%;
+   color: #fff;
+   padding: 8px 0;
+   font-size: 18px;
+   display: none;
+   background: linear-gradient(135deg, Color(P-Blue) 0%, Color(P-Green) 100%);
+}
+
+.wrapper.active:hover .file-name {
+   display: block;
+}
+
+.bookdetails-container #custom-btn {
+   margin-top: 30px;
+   width: 100%;
+   height: 40px;
+   display: block;
+   border: none;
+   border-radius: 25px;
+   color: #fff;
+   font-size: 12px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+   cursor: pointer;
+   outline: none;
+   background: linear-gradient(135deg, Color(P-Blue) 0%, Color(P-Green) 100%);
+}
+
+.bookdetails-content {
+   margin: 10em 8em;
+   width: 60%;
+   height: 18em;
+   padding: 40px 60px;
+   background-color: Color(P-DarkBlue);
+   border-radius: 6em;
+   padding-bottom: 5em;
+
+   .inputBox {
+      position: relative;
+      width: 100%;
+      margin-top: 10px;
+
+      input,
+      textarea {
+         background-color: Color(P-DarkBlue);
+         font-family: $font2;
+         width: 100%;
+         padding: 8px 0px;
+         font-size: 14px;
+         margin: 15px 0;
+         border: none;
+         border-bottom: 3px solid Color(P-Green);
+         outline: none;
+         resize: none;
+         color: #fff;
+      }
+
+      span {
+         position: absolute;
+         left: 1.5em;
+         top: 1em;
+         pointer-events: none;
+         transition: 0.5s;
+         color: #fff;
+      }
+
+      input:focus ~ span,
+      textarea:focus ~ span,
+      input:valid ~ span,
+      textarea:valid ~ span {
+         padding: 0px 3px;
+         color: #fff;
+         font-size: 12px;
+         transform: translate(-20px, -18px);
+      }
+
+      button {
+         outline: none;
+         border: none;
+         border-radius: 3em;
+         width: 100%;
+         background: linear-gradient(135deg, Color(P-Blue) 0%, Color(P-Green) 100%);
+         color: #fff;
+         cursor: pointer;
+         padding: 18px 10px;
+         font-size: 22px;
+         font-weight: 500;
+      }
+   }
+}
+
+@media (max-width: 1400px) {
+   .bookdetails {
+      width: 93vw;
+   }
+
+   .bookdetails-container {
+      width: 600px;
+      margin-left: 6em;
+   }
+
+   .bookdetails-content {
+      width: 50%;
+      padding: 50px 50px;
+      margin-left: 0em;
+
+      .inputBox {
+         margin: 0;
+      }
+   }
+}
+
+@media (max-width: 1100px) {
+   .bookdetails {
+      display: flex;
+      flex-direction: column;
+      padding: 0 2em;
+      place-items: center;
+   }
+
+   .bookdetails-container {
+      width: 500px;
+      margin: 2em auto;
+   }
+
+   .bookdetails-content {
+      width: 55%;
+      padding: 40px 50px;
+      margin: 8em auto;
+   }
+}
+
+@media (max-width: 900px) {
+   .bookdetails {
+      width: 80vw;
+   }
+
+   .bookdetails-container {
+      width: 400px;
+      margin: 2em auto;
+   }
+
+   .bookdetails-content {
+      width: 500px;
+      padding: 40px 50px;
+      margin: 8em auto;
+   }
+}
+
+@media (max-width: 786px) {
+   .bookdetails {
+      width: 80vw;
+   }
+
+   .bookdetails-container {
+      width: 400px;
+      margin: 2em auto;
+   }
+
+   .bookdetails-content {
+      width: 300px;
+      padding: 40px 50px;
+      margin: 8em auto;
+   }
+}
+
+// Edit Book Style Sheet
+
+#bookupdate-title {
+   position: absolute;
+   font-family: $font1;
+   font-size: 5em;
+   left: 5em;
+}
+
+.bookupdate-container {
+   font-family: $font2;
+   margin: 12em auto 0 auto;
+   width: 60%;
+   height: 18em;
+   padding: 40px 60px;
+   border-radius: 6em;
+   padding-bottom: 5em;
+
+   .inputBox {
+      position: relative;
+      width: 100%;
+      margin-top: 10px;
+
+      input,
+      textarea {
+         font-family: $font2;
+         width: 100%;
+         padding: 8px 0px;
+         font-size: 14px;
+         margin: 15px 0;
+         border: none;
+         border-bottom: 3px solid Color(P-Green);
+         outline: none;
+         resize: none;
+         color: #333;
+      }
+
+      span {
+         position: absolute;
+         left: 1.5em;
+         top: 1em;
+         pointer-events: none;
+         transition: 0.5s;
+         color: #666;
+      }
+
+      input:focus ~ span,
+      textarea:focus ~ span,
+      input:valid ~ span,
+      textarea:valid ~ span {
+         padding: 0px 3px;
+         color: Color(P-Blue);
+         font-size: 12px;
+         transform: translate(-20px, -18px);
+      }
+
+      button {
+         outline: none;
+         border: none;
+         border-radius: 3em;
+         width: 100%;
+         background: linear-gradient(135deg, Color(P-Blue) 0%, Color(P-Green) 100%);
+         color: #fff;
+         cursor: pointer;
+         padding: 18px 10px;
+         font-size: 22px;
+         font-weight: 500;
+      }
+   }
+}
+
+@media (max-width: 1400px) {
+   #bookupdate-title {
+      left: 4em;
+   }
+}
+
+@media (max-width: 1200px) {
+   #bookupdate-title {
+      left: 3em;
+   }
+}
+
+@media (max-width: 1000px) {
+   #bookupdate-title {
+      font-size: 3em;
+      left: 5em;
+   }
+
+   .bookupdate-container {
+      margin: 9em auto 0 auto;
+   }
+}
+
+@media (max-width: 800px) {
+   #bookupdate-title {
+      font-size: 3em;
+      left: 1.5em;
+   }
+
+   .bookupdate-container {
+      margin: 9em auto 0 auto;
+   }
+}

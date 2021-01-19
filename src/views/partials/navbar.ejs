@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+      <link rel="stylesheet" href="css/style.css" />
+      <title></title>
+   </head>
+   <body>
+      <header>
+         <% if(typeof user !== 'undefined') {%>
+         <a class="logo" href="/home">BB</a>
+         <% } else { %>
+         <a class="logo" href="/">BB</a>
+         <% } %>
+
+         <div class="search__box">
+            <input type="text" placeholder="Search the 'Book' name " />
+            <div class="search__btn"><i class="fa fa-search"></i></div>
+         </div>
+
+         <% if(typeof user !== 'undefined') {%>
+         <div class="dropdown">
+            <button id="user-btn" class="dropdown-btn"><i class="fa fa-user-circle-o"></i></button>
+            <div id="options" class="dropdown-content">
+               <a href="/updatebio"><i class="fa fa-pencil-square-o"></i> EDIT PROFILE</a>
+               <a href="/addbook"><i class="fa fa-plus-square"></i> ADD BOOK</a>
+               <a href="/logout"><i class="fa fa-sign-out"></i> LOG OUT</a>
+            </div>
+         </div>
+         <% } else { %>
+         <a href="/login"><button id="siu-btn">SignIn | Up</button></a>
+         <% } %>
+      </header>
+
+      <script>
+         const user = document.getElementById("user");
+         const options = document.getElementById("options");
+      </script>
+   </body>
+</html>

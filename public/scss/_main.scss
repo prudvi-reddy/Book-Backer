@@ -1,0 +1,280 @@
+.main-content {
+   font-family: $font2;
+   display: flex;
+   width: 100%;
+   height: 90.3vh;
+   background: linear-gradient(to right, #fff 40%, transparent), url(../img/Books.jpg);
+
+   &__title {
+      color: Color(P-DarkBlue);
+      margin: 8em 6%;
+
+      div {
+         color: Color(P-Blue);
+         font-family: $font1;
+         font-size: 8em;
+      }
+
+      h4 {
+         font-size: 1.6em;
+         letter-spacing: 0.34em;
+         margin-top: -0.3em;
+         margin-left: 0.2em;
+      }
+
+      p {
+         width: 38em;
+         margin-top: 3em;
+         font-size: 1em;
+      }
+
+      button {
+         font-size: 18px;
+         margin-top: 1.5em;
+         color: #fff;
+         border: none;
+         outline: none;
+         background-color: rgba($color: Color(P-Blue), $alpha: 0.9);
+         padding: 1em 3em;
+         border-radius: 3em;
+         transition: 0.3s;
+         text-transform: uppercase;
+
+         &:hover {
+            background-color: rgba($color: Color(P-Blue), $alpha: 1);
+         }
+      }
+   }
+}
+
+#title {
+   display: flex;
+   color: Color(P-Blue);
+   font-family: $font1;
+   margin: 2em 0em 0 6%;
+   font-size: 3em;
+}
+
+.service {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #fff;
+   height: 100vh;
+   font-family: $font2;
+   margin-left: 3em;
+
+   &-container {
+      position: relative;
+      width: 70em;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 20px;
+   }
+
+   &-card {
+      position: relative;
+      width: 42%;
+      height: 210px;
+      background-color: #e8e8e8;
+      display: flex;
+      margin: 30px 0;
+      border-radius: 0em 8em 0em 8em;
+
+      .imgBx {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 190px;
+         height: 190px;
+         background-color: Color(P-Blue);
+         z-index: 1;
+         display: flex;
+         left: -85px;
+         top: -30px;
+         justify-content: center;
+         align-items: center;
+         overflow: hidden;
+         transition: 0.5s ease-in-out;
+         border-radius: 8em;
+
+         img {
+            max-width: 100px;
+         }
+      }
+   }
+
+   &-content {
+      position: absolute;
+      right: 0;
+      width: calc(100% - 150px);
+      height: 100%;
+      padding: 24px 28px 0 0;
+
+      h3 {
+         margin-top: 0.7em;
+         color: Color(P-DarkBlue);
+         margin-bottom: 0.5em;
+         font-size: 28px;
+      }
+
+      p {
+         font-size: 13px;
+         font-weight: 600;
+      }
+   }
+}
+
+.contact {
+   background-color: Color(P-Blue);
+
+   #title {
+      margin: 0 0 0.5em 6%;
+      padding-top: 1em;
+      color: Color(P-DarkBlue);
+   }
+
+   .map {
+      display: block;
+      margin: 1em 6em 0 6em;
+   }
+}
+
+.contact-details {
+   font-family: $font2;
+   position: relative;
+   min-height: 100vh;
+   padding: 40px 100px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   background: Color(P-DarkBlue);
+
+   .copyright {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      border-top: 2px solid Color(P-Blue);
+      margin-top: 2em;
+      color: #fff;
+      padding-top: 1em;
+      margin-bottom: -1em;
+   }
+}
+
+.contact-container {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 30px;
+
+   .contactInfo {
+      margin-left: 1em;
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+
+      .box {
+         position: relative;
+         padding: 20px 0;
+         display: flex;
+
+         .icon {
+            color: Color(P-DarkBlue);
+            min-width: 60px;
+            height: 60px;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 22px;
+         }
+
+         .text {
+            display: flex;
+            margin-left: 20px;
+            font-size: 16px;
+            color: #fff;
+            flex-direction: column;
+            font-weight: 300;
+
+            h3 {
+               font-weight: 500;
+               color: Color(P-Blue);
+               margin-bottom: -0.6em;
+               margin-top: 0.3em;
+            }
+         }
+      }
+   }
+
+   .contactForm {
+      width: 50%;
+      padding: 20px 40px;
+      background-color: #fff;
+      border-radius: 6em;
+      padding-bottom: 5em;
+
+      h2 {
+         font-family: $font1;
+         color: Color(P-Blue);
+         margin-left: 25px;
+         font-size: 50px;
+         font-weight: 500;
+      }
+
+      .inputBox {
+         position: relative;
+         width: 100%;
+         margin-top: 10px;
+
+         input,
+         textarea {
+            font-family: $font2;
+            width: 100%;
+            padding: 8px 0px;
+            font-size: 14px;
+            margin: 12px 0;
+            border: none;
+            border-bottom: 3px solid Color(P-Blue);
+            outline: none;
+            resize: none;
+         }
+
+         span {
+            position: absolute;
+            left: 1.5em;
+            top: 1em;
+            pointer-events: none;
+            transition: 0.5s;
+            color: #666;
+         }
+
+         input:focus ~ span,
+         textarea:focus ~ span,
+         input:valid ~ span,
+         textarea:valid ~ span {
+            padding: 0px 3px;
+            color: Color(P-Blue);
+            font-size: 12px;
+            transform: translateY(-16px);
+         }
+
+         button {
+            outline: none;
+            border: none;
+            border-radius: 3em;
+            width: 100%;
+            background-color: Color(P-DarkBlue);
+            color: #fff;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 18px;
+         }
+      }
+   }
+}

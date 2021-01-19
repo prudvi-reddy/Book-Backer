@@ -1,0 +1,109 @@
+#userprofile-title {
+   position: absolute;
+   font-family: $font1;
+   font-size: 5em;
+   left: 8em;
+}
+
+.userprofile-container {
+   font-family: $font2;
+   margin: 10em auto 0 auto;
+   width: 60%;
+   height: 18em;
+   padding: 40px 60px;
+   border-radius: 6em;
+   padding-bottom: 5em;
+
+   .inputBox {
+      position: relative;
+      width: 100%;
+      margin-top: 10px;
+
+      input,
+      textarea {
+         font-family: $font2;
+         width: 100%;
+         padding: 8px 0px;
+         font-size: 14px;
+         margin: 15px 0;
+         border: none;
+         border-bottom: 3px solid Color(P-Green);
+         outline: none;
+         resize: none;
+         color: #333;
+      }
+
+      span {
+         position: absolute;
+         left: 1.5em;
+         top: 1em;
+         pointer-events: none;
+         transition: 0.5s;
+         color: #666;
+      }
+
+      input:focus ~ span,
+      textarea:focus ~ span,
+      input:valid ~ span,
+      textarea:valid ~ span {
+         padding: 0px 3px;
+         color: Color(P-Blue);
+         font-size: 12px;
+         transform: translate(-20px, -18px);
+      }
+
+      button {
+         outline: none;
+         border: none;
+         border-radius: 3em;
+         width: 100%;
+         background: linear-gradient(135deg, Color(P-Blue) 0%, Color(P-Green) 100%);
+         color: #fff;
+         cursor: pointer;
+         padding: 18px 10px;
+         font-size: 22px;
+         font-weight: 500;
+      }
+   }
+}
+
+@media (max-width: 1400px) {
+   #userprofile-title {
+      left: 6em;
+   }
+}
+
+@media (max-width: 1200px) {
+   #userprofile-title {
+      left: 5em;
+   }
+}
+
+@media (max-width: 1000px) {
+   #userprofile-title {
+      font-size: 5em;
+      left: 4.6em;
+   }
+
+   .userprofile-container {
+      margin: 9em auto 0 auto;
+   }
+}
+
+@media (max-width: 800px) {
+   #userprofile-title {
+      font-size: 5em;
+      left: 3.3em;
+   }
+
+   .userprofile-container {
+      margin: 9em auto 0 auto;
+   }
+}
+
+@media (max-width: 700px) {
+   #userprofile-title {
+      font-size: 5em;
+      left: 2em;
+   }
+}

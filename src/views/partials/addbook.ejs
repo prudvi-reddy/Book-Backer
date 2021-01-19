@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Add Book</title>
+   </head>
+   <body>
+      <%- include ("./navbar") %>
+
+      <form action="/users/addbook" class="bookdetails" method="post" enctype="multipart/form-data">
+         <div class="bookdetails-container">
+            <div class="wrapper">
+               <div class="image">
+                  <img src="" alt="" />
+               </div>
+               <div class="content">
+                  <div class="icon"><i class="fa fa-cloud-upload"></i></div>
+                  <div class="text">No file chosen, yet!</div>
+               </div>
+               <div id="cancel-btn"><i class="fa fa-times"></i></div>
+               <div class="file-name">File name here</div>
+            </div>
+            <input type="file" class="form-control" name="bookcover" id="default-btn" hidden />
+            <button onclick="defaultBtnActive()" id="custom-btn">Choose a file</button>
+         </div>
+
+         <div class="bookdetails-content">
+            <div class="inputBox">
+               <input type="text" class="form-control" name="bookname" id="bookname" required />
+               <span>Book Name</span>
+            </div>
+            <div class="inputBox">
+               <input type="number" class="form-control" name="quantity" id="quantity" required />
+               <span>Quantity</span>
+            </div>
+            <div class="inputBox">
+               <input type="description" class="form-control" name="description" required />
+               <span>Description</span>
+            </div>
+            <div class="inputBox">
+               <button type="submit" name="sbt-btn">Add Book</button>
+            </div>
+         </div>
+      </form>
+
+      <script src="js/bookDetails.js"></script>
+   </body>
+</html>

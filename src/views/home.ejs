@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Book Backer - Home</title>
+   </head>
+   <body>
+      <%- include ("./partials/navbar") %>
+
+      <span id="user__title">Hi, Prudvi kumar reddy</span>
+      <div class="mybooks__heading">
+         <h2>Added Books</h2>
+         <a href="/addbook">
+            <button id="addbook-btn"><i class="fa fa-plus"></i>Add Book</button>
+         </a>
+      </div>
+      <% if (data.length > 0) { %>
+      <section class="books-stack">
+         <% for (var i = 0; i < data.length; i++) { %>
+         <div class="book-post">
+            <div class="book-post__img">
+               <img src="/books/<%=data[i]._id%>/bookcover" alt="book1" />
+            </div>
+            <div class="book-post__info">
+               <h1 class="book-post__title"><%= data[i].bookname %></h1>
+               <div class="book-post__quantity">
+                  <span>Quantity:</span>
+                  <span><%= data[i].quantity %></span>
+               </div>
+               <p class="book-post__text"><%= data[i].description %></p>
+               <a href="/bookedit/<%=data[i]._id %>" class="book-post__cta"><i class="fa fa-pencil-square-o"></i>Edit Book</a>
+               <a href="/delete/<%=data[i]._id %>" class="book-post__cta"><i class="fa fa-trash-o"></i>Delete</a>
+            </div>
+         </div>
+         <% } %>
+      </section>
+      <% } else { %>
+      <div class="mybooks__empty">
+         <img src="img/bookStack.svg" alt="Book Lover" />
+         <h4 class="mybooks__empty__text">Your Book Shelf is Empty, Isn't It?</h4>
+      </div>
+      <% } %>
+   </body>
+</html>

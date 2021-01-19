@@ -1,0 +1,52 @@
+#search-title {
+   font-family: $font1;
+   font-size: 3em;
+   color: Color(P-Blue);
+   margin: 1em 1.6em 0 1.8em;
+}
+
+.search-noresult {
+   margin: 2em auto;
+   //    background-color: #445345;
+   width: 30rem;
+   height: 30rem;
+
+   img {
+      width: 30em;
+   }
+
+   &__text {
+      margin-left: 2em;
+      font-size: 2em;
+      color: Color(P-Blue);
+   }
+}
+
+.book-post__form {
+   margin: 0.3rem auto 0.3rem auto;
+
+   input {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      font-size: 1rem;
+      border-bottom: 2px solid #fff;
+      padding-bottom: 0.5rem;
+      color: #fff;
+   }
+
+   .request-btn {
+      border: none;
+      outline: none;
+      background-color: Color(P-Green);
+      padding: 1rem 2rem;
+      margin-left: 3rem;
+      color: #fff;
+      font-size: 1rem;
+      border-radius: 2em;
+
+      i {
+         margin-right: 0.5rem;
+      }
+   }
+}

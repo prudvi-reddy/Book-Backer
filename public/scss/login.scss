@@ -1,0 +1,365 @@
+.eye1,
+.eye2 {
+   display: inline-block;
+   position: absolute;
+   top: 0.6em;
+   left: 17em;
+   background-color: transparent;
+   padding: 5px;
+   width: 50px;
+   cursor: pointer;
+   border: none;
+   outline: none;
+   font-size: inherit;
+}
+
+.eye1 i,
+.eye2 i {
+   color: #666;
+}
+
+.hide {
+   display: none;
+}
+
+.login-container .back {
+   position: absolute;
+   top: 2em;
+   left: 5em;
+   z-index: 100;
+}
+
+.back i {
+   margin-right: 0.3em;
+}
+
+.back a {
+   font-size: 1.2em;
+}
+
+body {
+   font-family: "Roboto", sans-serif;
+   overflow: hidden;
+}
+
+.wave {
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   height: 100%;
+   z-index: -1;
+}
+
+.login-container {
+   width: 100vw;
+   height: 100vh;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-gap: 7rem;
+   padding: 0 2rem;
+}
+
+.img {
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   margin-right: 3em;
+}
+
+.main-content {
+   display: flex;
+   margin-left: 0.8em;
+   justify-content: flex-start;
+}
+
+.form-box {
+   width: 23em;
+   height: 40em;
+   margin: auto 2em;
+   position: relative;
+   background-color: transparent;
+   padding: 0.5em;
+   overflow: hidden;
+   border-radius: 1.5em;
+   align-items: center;
+   text-align: center;
+}
+
+.img img {
+   width: 32em;
+}
+
+.button-box {
+   width: 14em;
+   margin: 2.4em auto;
+   position: relative;
+   background-color: #fff;
+   box-shadow: 0px 0px 20px 1px #b6eed6;
+   border: 0.1em solid #06d6a0;
+   border-radius: 2em;
+}
+
+#btn {
+   top: -0.1em;
+   left: 0;
+   position: absolute;
+   width: 7.3em;
+   height: 105%;
+   background: #06d6a0;
+   transition: 0.5s;
+   border-radius: 2em 0 0 2em;
+   clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+}
+
+.toggle-btn {
+   padding: 1em 2.341em;
+   cursor: pointer;
+   background: transparent;
+   border: 0;
+   outline: none;
+   position: relative;
+   transition: 0.6s;
+}
+
+form {
+   width: 22em;
+   position: absolute;
+   top: 10em;
+   transition: 0.5s;
+}
+
+#loginBtn {
+   color: white;
+}
+
+#login {
+   left: 0;
+}
+
+#register {
+   top: 11em;
+   left: 26em;
+}
+
+.input-content img {
+   height: 12em;
+}
+
+.input-content .input-div {
+   position: relative;
+   display: grid;
+   grid-template-columns: 7% 93%;
+   margin: 1.8em 0;
+   padding: 0.1em 0;
+   border-bottom: 2px solid #ddd;
+}
+
+.input-content .input-div.one {
+   margin-top: 0;
+}
+
+.i {
+   font-size: 15px;
+   color: #999;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.i i {
+   transition: 0.3s;
+}
+
+.input-div > div {
+   position: relative;
+   height: 45px;
+}
+
+.input-div > div > h5 {
+   position: absolute;
+   left: 10px;
+   top: 0%;
+   transform: translateY(-50%);
+   color: #999;
+   font-size: 14px;
+   transition: 0.3s;
+   letter-spacing: 0.05em;
+   font-weight: 500;
+}
+
+.input-div:before,
+.input-div:after {
+   content: "";
+   position: absolute;
+   bottom: -2px;
+   width: 0%;
+   height: 2px;
+   background-color: #06d6a0;
+   transition: 0.4s;
+}
+
+.input-div:before {
+   right: 50%;
+}
+
+.input-div:after {
+   left: 50%;
+}
+
+.input-div.focus:before,
+.input-div.focus:after {
+   width: 50%;
+}
+
+.input-div.focus > div > h5 {
+   top: -28px;
+   font-size: 12px;
+   color: #06d6a0;
+}
+
+.input-div.focus > .i > i {
+   color: #06d6a0;
+}
+
+.input-div > div > input {
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   border: none;
+   outline: none;
+   background: none;
+   padding: 0em 0em 0em 0.7em;
+   font-size: 13px;
+   font-weight: 500;
+   color: #444;
+   // pointer-events: visible;
+   // font-family: "poppins", sans-serif;
+}
+
+.input-div > div > input[type="password"] {
+   letter-spacing: 0.2em;
+}
+
+.input-div.pass {
+   margin-bottom: 4px;
+}
+
+a {
+   margin-top: 0.8em;
+   display: block;
+   text-align: right;
+   text-decoration: none;
+   color: #999;
+   font-size: 13px;
+   transition: 0.3s;
+   font-weight: 500;
+}
+
+a:hover {
+   color: #118ab2;
+}
+
+.btn {
+   display: block;
+   width: 100%;
+   height: 50px;
+   border-radius: 2em;
+   outline: none;
+   border: none;
+   background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+   background-size: 200%;
+   font-size: 1em;
+   color: #fff;
+   font-weight: 500;
+   text-transform: uppercase;
+   margin: 2em 0;
+   cursor: pointer;
+   transition: 0.5s;
+}
+.btn:hover {
+   background-position: right;
+}
+
+form > img {
+   margin-bottom: 2em;
+}
+
+@media screen and (max-width: 1100px) {
+   .login-container {
+      grid-gap: 4rem;
+   }
+
+   .form-box {
+      margin: auto 0;
+   }
+
+   form {
+      width: 18em;
+   }
+
+   .button-box {
+      left: -2.5em;
+   }
+}
+
+@media screen and (max-width: 1050px) {
+   .login-container {
+      grid-gap: 6rem;
+   }
+
+   .img img {
+      width: 400px;
+   }
+}
+
+@media screen and (max-width: 1030px) {
+   .login-container {
+      grid-template-columns: 1fr;
+   }
+
+   .form-box {
+      margin: auto;
+   }
+
+   .button-box {
+      left: -1.2em;
+   }
+
+   form {
+      width: 20em;
+   }
+
+   .img {
+      display: none;
+   }
+
+   .wave {
+      display: none;
+   }
+
+   .main-content {
+      justify-content: center;
+   }
+}
+
+@media screen and (max-width: 700px) {
+   form {
+      margin: auto;
+   }
+
+   .button-box {
+      top: 1.5em;
+      left: -1.8em;
+   }
+
+   .login-container .back {
+      top: 1em;
+      left: 1.5em;
+   }
+
+   .back a {
+      font-size: 0.9em;
+   }
+}
